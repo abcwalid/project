@@ -99,7 +99,17 @@ pp=0;
 def pclear(): 
 	for pp in range(10):
 		print ('       \n');
-		
+idp=0
+prx=0
+def price (idp):# calcule the price of the whole period per car
+	pr=0;
+	ind=0;
+	pr=raw_input ('For how many days your are going to rent the Car  ');
+	ind=f2.index(idp);
+	prr1=float(f4[ind]);
+	prx=int(pr)*prr1;
+	print ('The tota price is ',prx);
+	raw_input('Press Enter to Contunue ');
 
 pclear();
 while (x!=0):
@@ -133,7 +143,8 @@ while (x!=0):
         print ('-----------------------------------------\n');
         rentcar(i);
     elif x==3:
-        print ('iiiii3333333333iii')
+		idp=raw_input ('Waht is the ID of The car your are going to rent  ')
+		price (idp) #function calculates the price during the whole period
     elif x==4:
         i=0;
         print ('Cars in Stack Availoble for Rent are ',len(f1));
